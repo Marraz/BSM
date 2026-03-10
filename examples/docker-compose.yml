@@ -1,0 +1,14 @@
+services:
+  bsm:
+    image: marraz/bsm:latest
+    container_name: bsm
+    restart: always
+    ports:
+      - 8080:8080
+    environment:
+      - COMPENSATION_HOURS=-8
+      - MAX_JOB_HISTORY=180
+      - FREE_SPACE_THRESHOLD_BYTES=107374182400
+    volumes:
+      - '/data/:/data/'
+      - '~/bsm/config:/BSM/Config/'
