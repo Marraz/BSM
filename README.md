@@ -37,7 +37,7 @@ Default value: 180
 
 ## Download
 ### Docker
-docker run -d -p 8080:8080 marraz/bsm:latest
+docker run -d -p 8080:8080 marraz/bsm:latest \
 Docker compose example in examples/docker-compose.yml
 
 ### Unraid
