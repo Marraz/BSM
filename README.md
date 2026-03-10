@@ -1,17 +1,19 @@
 # BSM
 Ingress and organize blackmagicdesign devices clips and projects into your own server.
 
-- [Important nodes](#important-nodes)
-- [Enviroment variables](#enviroment-variables)
-  - [STORAGE\_PATH](#storage_path)
-  - [FREE\_SPACE\_THRESHOLD\_BYTES](#free_space_threshold_bytes)
-  - [COMPENSATION\_HOURS](#compensation_hours)
-  - [MAX\_JOB\_HISTORY](#max_job_history)
-- [Download](#download)
-  - [Docker](#docker)
-  - [Unraid](#unraid)
-  - [Truenas](#truenas)
-- [TODO](#todo)
+- [BSM](#bsm)
+  - [Important nodes](#important-nodes)
+  - [Enviroment variables](#enviroment-variables)
+    - [STORAGE\_PATH](#storage_path)
+    - [FREE\_SPACE\_THRESHOLD\_BYTES](#free_space_threshold_bytes)
+    - [COMPENSATION\_HOURS](#compensation_hours)
+    - [MAX\_JOB\_HISTORY](#max_job_history)
+  - [Download](#download)
+    - [Docker](#docker)
+    - [Unraid](#unraid)
+    - [Truenas](#truenas)
+  - [Api support](#api-support)
+  - [TODO](#todo)
 
 ## Important nodes
 - Currently atems are organize as \<STORAGE_PATH\>/\<Project_name\>/\<Date\>/\<Project\>/...\
@@ -49,6 +51,18 @@ Template coming soon
 
 ### Truenas
 Template coming soon
+
+## Api support
+Restful api is supported to pause and resume all downloads \
+GET `<ip:port>\api\arealljobspause`
+Returns a bool as true if all download jobs are pause
+
+GET POST `<ip:port>\api\pauseall`
+Pause all download jobs
+
+GET POST `<ip:port>\api\resumeall`
+Resume all download jobs
+
 
 ## TODO
 - IP and model auto-detect
