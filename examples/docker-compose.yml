@@ -6,9 +6,10 @@ services:
     ports:
       - 8080:8080
     environment:
-      - COMPENSATION_HOURS=-8
+      - TZ=America/Los_Angeles #Does take into account the time zone when organizing files
+      - COMPENSATION_HOURS=-8  #Not necessary for everyone, check README
       - MAX_JOB_HISTORY=180
-      - FREE_SPACE_THRESHOLD_BYTES=107374182400
+      - FREE_SPACE_THRESHOLD_BYTES=107374182400 # Around a 100GB should be safe if you are using your disk for other things, otherwise set to 0. Defaults to 500GB
     volumes:
       - '/data/:/data/'
       - '~/bsm/config:/BSM/Config/'
